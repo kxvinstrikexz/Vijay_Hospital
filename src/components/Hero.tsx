@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { BotanicalSignature } from './BotanicalSignature';
 
 export const Hero: React.FC = () => {
@@ -153,14 +154,78 @@ export const Hero: React.FC = () => {
                 </div>
               </div>
 
-              {/* Botanical Accent SVG Emblem */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-ivory border border-sand/80 shadow-lg flex items-center justify-center p-3 text-forest-700">
-                <svg viewBox="0 0 100 100" className="w-full h-full fill-current">
-                  <path d="M50 15 C30 15, 15 30, 15 50 C15 70, 30 85, 50 85 C70 85, 85 70, 85 50 C85 30, 70 15, 50 15 Z" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" />
-                  <circle cx="50" cy="50" r="28" fill="#243D32" />
-                  <path d="M50 34 V66 M34 50 H66" stroke="#F5F1E8" strokeWidth="4" strokeLinecap="round" />
+              {/* Premium Rod of Asclepius Medical Emblem */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-ivory border border-sand/80 shadow-lg flex items-center justify-center p-2.5 transition-shadow duration-300 hover:shadow-xl cursor-default"
+                role="img"
+                aria-label="Medical care"
+              >
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full select-none">
+                  {/* Forest Green Circular Base (#243D32) */}
+                  <circle cx="50" cy="50" r="47" fill="#243D32" />
+                  
+                  {/* Delicate Muted Gold Inner Accent Rim (#B77D5C) */}
+                  <circle cx="50" cy="50" r="42" stroke="#B77D5C" strokeWidth="1.2" strokeOpacity="0.35" />
+
+                  {/* Subtle Integrated Medical Cross (+) */}
+                  {/* Base cross in muted gold */}
+                  <path 
+                    d="M50 32 V68 M32 50 H68" 
+                    stroke="#B77D5C" 
+                    strokeWidth="5" 
+                    strokeLinecap="round" 
+                    strokeOpacity="0.28" 
+                  />
+                  {/* Fine inner cross in Warm Ivory */}
+                  <path 
+                    d="M50 32 V68 M32 50 H68" 
+                    stroke="#F5F1E8" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                    strokeOpacity="0.35" 
+                  />
+
+                  {/* The Staff of Asclepius (Central Medical Rod in Muted Gold #B77D5C) */}
+                  <line 
+                    x1="50" y1="18" x2="50" y2="82" 
+                    stroke="#B77D5C" 
+                    strokeWidth="3" 
+                    strokeLinecap="round" 
+                  />
+                  {/* Staff Finial Knob / Restorative Node */}
+                  <circle cx="50" cy="17" r="3.2" fill="#B77D5C" />
+                  <circle cx="50" cy="17" r="1.5" fill="#F5F1E8" />
+                  
+                  {/* Bottom Finial Node */}
+                  <circle cx="50" cy="82" r="1.8" fill="#B77D5C" />
+
+                  {/* Asclepius Serpent (Elegantly Wrapped, Sleek Line Art in Warm Ivory #F5F1E8) */}
+                  <path 
+                    d="M 44 76 
+                       C 40 72, 42 66, 47 63 
+                       C 55 58, 56 53, 51 49 
+                       C 44 44, 43 38, 48 33 
+                       C 54 28, 54 23, 49 20 
+                       C 46 18, 43 20.5, 45 23" 
+                    stroke="#F5F1E8" 
+                    strokeWidth="2.8" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                  />
+                  
+                  {/* Delicate Serpent Crown Accent */}
+                  <path 
+                    d="M 45 23 C 45.5 24.5, 47.5 24.5, 48 23" 
+                    stroke="#B77D5C" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                  />
                 </svg>
-              </div>
+              </motion.div>
 
             </div>
           </div>
