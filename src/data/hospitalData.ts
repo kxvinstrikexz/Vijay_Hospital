@@ -16,6 +16,7 @@ export interface Facility {
   category: 'clinical' | 'inpatient' | 'emergency' | 'support';
   description: string;
   image?: string;
+  imageType?: 'authentic' | 'illustrative';
   badge?: string;
 }
 
@@ -24,6 +25,7 @@ export interface GalleryItem {
   title: string;
   category: 'Wards & Care' | 'Child Health' | 'Diagnostics & Pharmacy' | 'Hospital Architecture';
   image: string;
+  imageType?: 'authentic' | 'illustrative';
   caption: string;
   aspect?: 'wide' | 'tall' | 'square';
 }
@@ -118,6 +120,7 @@ export const FACILITIES: Facility[] = [
     category: 'clinical',
     description: 'Spacious, well-ventilated waiting halls and fast-track consultation channels for convenient same-day clinical visits.',
     image: '/images/reception-lounge.jpg',
+    imageType: 'authentic',
     badge: 'Fast Triage'
   },
   {
@@ -126,6 +129,7 @@ export const FACILITIES: Facility[] = [
     category: 'inpatient',
     description: 'Sanitized patient recovery ward equipped with comfortable medical beds, individual central oxygen ports, and dedicated nursing attention.',
     image: '/images/common-ip-ward.jpg',
+    imageType: 'authentic',
     badge: 'Round-the-clock Nursing'
   },
   {
@@ -134,6 +138,7 @@ export const FACILITIES: Facility[] = [
     category: 'inpatient',
     description: 'Peaceful, air-conditioned private rooms designed for patient dignity, quiet recuperation, and comfortable family stay.',
     image: '/images/single-room-maternity.jpg',
+    imageType: 'authentic',
     badge: 'Private & Peaceful'
   },
   {
@@ -141,6 +146,8 @@ export const FACILITIES: Facility[] = [
     title: 'Emergency Ward',
     category: 'emergency',
     description: 'Immediate acute assessment bay ready 24/7 with trained resuscitation gear and rapid clinical response protocols.',
+    image: '/images/emergency-ward-facility.jpg',
+    imageType: 'illustrative',
     badge: '24/7 Ready'
   },
   {
@@ -149,6 +156,7 @@ export const FACILITIES: Facility[] = [
     category: 'emergency',
     description: 'Specialized neonatal radiant warmers and precise temperature regulation units for vulnerable newborns.',
     image: '/images/nicu-infant-warmer.jpg',
+    imageType: 'authentic',
     badge: 'Phoenix Incubator'
   },
   {
@@ -156,6 +164,8 @@ export const FACILITIES: Facility[] = [
     title: 'PICU (Pediatric ICU)',
     category: 'emergency',
     description: 'Continuous monitoring and supportive therapies tailored specifically to infants and growing children during acute phases.',
+    image: '/images/picu-pediatric-ward.jpg',
+    imageType: 'illustrative',
     badge: 'Child Focused'
   },
   {
@@ -164,6 +174,7 @@ export const FACILITIES: Facility[] = [
     category: 'clinical',
     description: 'Direct pipeline infrastructure delivering continuous high-purity medical oxygen straight to every ward bed and emergency station.',
     image: '/images/ip-ward-oxygen.jpg',
+    imageType: 'authentic',
     badge: 'Continuous Pipeline'
   },
   {
@@ -172,6 +183,7 @@ export const FACILITIES: Facility[] = [
     category: 'clinical',
     description: 'Fully equipped automated hematology counters (UNIKON 23S), binocular microscopy, and rapid biochemical diagnostic testing on-site.',
     image: '/images/diagnostic-laboratory.jpg',
+    imageType: 'authentic',
     badge: 'On-site Results'
   },
   {
@@ -179,6 +191,8 @@ export const FACILITIES: Facility[] = [
     title: 'Digital X-Ray Facility',
     category: 'clinical',
     description: 'Low-radiation diagnostic radiography for rapid bone fracture analysis and chest evaluations.',
+    image: '/images/digital-xray-facility.jpg',
+    imageType: 'authentic',
     badge: 'Fast Imaging'
   },
   {
@@ -186,6 +200,8 @@ export const FACILITIES: Facility[] = [
     title: 'Digital ECG',
     category: 'clinical',
     description: 'Multi-channel electro-cardiogram screening for immediate cardiac rhythm assessment and diabetic wellness tracking.',
+    image: '/images/digital-ecg-workstation.jpg',
+    imageType: 'illustrative',
     badge: 'Instant Tracing'
   },
   {
@@ -193,6 +209,8 @@ export const FACILITIES: Facility[] = [
     title: 'Nebulization Station',
     category: 'clinical',
     description: 'Dedicated ultrasonic and jet nebulization points for swift relief of paediatric wheezing, asthma, and respiratory congestion.',
+    image: '/images/nebulization-station.jpg',
+    imageType: 'illustrative',
     badge: 'Respiratory Relief'
   },
   {
@@ -201,6 +219,7 @@ export const FACILITIES: Facility[] = [
     category: 'support',
     description: 'Full-fledged dispensary stocking genuine pediatric syrups, critical care injectables, and diabetic medications around the clock.',
     image: '/images/vijay-pharmacy-counter.jpg',
+    imageType: 'authentic',
     badge: '24/7 Open'
   }
 ];
@@ -299,7 +318,53 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Hospital Architecture & Staircase',
     category: 'Hospital Architecture',
     image: '/images/hospital-staircase.jpg',
+    imageType: 'authentic',
     caption: 'Modern glass-and-steel architectural atrium connecting ground level outpatient clinics to upper inpatient wards.',
+    aspect: 'wide'
+  },
+  {
+    id: 'g-13',
+    title: 'Digital Radiography (X-Ray) Suite',
+    category: 'Diagnostics & Pharmacy',
+    image: '/images/digital-xray-facility.jpg',
+    imageType: 'authentic',
+    caption: 'Authentic on-site digital X-Ray imaging unit for rapid fracture, chest, and emergency radiological screening.',
+    aspect: 'tall'
+  },
+  {
+    id: 'g-14',
+    title: 'Emergency Resuscitation & Trauma Bay',
+    category: 'Wards & Care',
+    image: '/images/emergency-ward-facility.jpg',
+    imageType: 'illustrative',
+    caption: '24/7 acute trauma and emergency resuscitation station equipped with piped medical gases and vital monitors.',
+    aspect: 'wide'
+  },
+  {
+    id: 'g-15',
+    title: 'Pediatric Intensive Care Unit (PICU)',
+    category: 'Child Health',
+    image: '/images/picu-pediatric-ward.jpg',
+    imageType: 'illustrative',
+    caption: 'Gentle, modern pediatric recovery environment with multi-parameter monitoring for young patients.',
+    aspect: 'wide'
+  },
+  {
+    id: 'g-16',
+    title: 'Digital 12-Lead ECG Workstation',
+    category: 'Diagnostics & Pharmacy',
+    image: '/images/digital-ecg-workstation.jpg',
+    imageType: 'illustrative',
+    caption: 'Mobile multi-channel electrocardiogram diagnostic station for rapid cardiac evaluation and diabetic health reviews.',
+    aspect: 'wide'
+  },
+  {
+    id: 'g-17',
+    title: 'Dedicated Respiratory Nebulization Station',
+    category: 'Child Health',
+    image: '/images/nebulization-station.jpg',
+    imageType: 'illustrative',
+    caption: 'Quiet, comfortable aerosol nebulization station providing fast respiratory relief for children and adults.',
     aspect: 'wide'
   }
 ];

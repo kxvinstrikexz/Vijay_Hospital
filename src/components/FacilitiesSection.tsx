@@ -86,7 +86,7 @@ export const FacilitiesSection: React.FC = () => {
 
                     <div className="absolute bottom-3 left-4 right-4">
                       <p className="text-[10px] font-mono uppercase tracking-widest text-sage-light">
-                        Authentic Facility
+                        {facility.imageType === 'illustrative' ? 'Clinical Overview' : 'Authentic Facility'}
                       </p>
                     </div>
                   </div>
