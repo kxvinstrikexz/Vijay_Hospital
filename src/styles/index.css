@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F5F1E8;
+    color: #292D29;
+    font-family: 'Manrope', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Refined typography defaults */
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  .font-mono {
+    font-family: 'Space Grotesk', monospace;
+  }
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F1E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #A8B99C;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #727D50;
+}
+
+/* Editorial subtle borders and image treatments */
+.editorial-border {
+  border-color: rgba(36, 61, 50, 0.12);
+}
+
+.editorial-shadow {
+  box-shadow: 0 12px 36px -8px rgba(36, 61, 50, 0.08);
+}
+
+.editorial-copper-glow {
+  box-shadow: 0 16px 40px -10px rgba(183, 125, 92, 0.18);
+}
+
