@@ -77,35 +77,35 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Back to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-sand/60">
-          <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} Vijay Hospital. All Rights Reserved.</span>
-            <span>•</span>
-            <span className="hidden sm:inline">Usilampatti, Madurai District</span>
+        <div className="pt-8 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 text-xs font-mono text-sand/60">
+          <div className="flex flex-col items-center sm:items-start gap-1.5 text-center sm:text-left">
+            <div className="flex items-center gap-2">
+              <span>© {new Date().getFullYear()} Vijay Hospital. All Rights Reserved.</span>
+              <span>•</span>
+              <span className="hidden sm:inline">Usilampatti, Madurai District</span>
+            </div>
+            <p className="text-[11px] text-sand/50">
+              <span>Designed & Developed by </span>
+              <a
+                href="https://kevinsivraj.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sand/75 hover:text-ivory transition-colors underline-offset-4 hover:underline"
+              >
+                Kevin Siv Raj M S
+              </a>
+            </p>
           </div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-sand/80 hover:text-ivory transition-colors group"
+            className="flex items-center gap-2 text-sand/80 hover:text-ivory transition-colors group self-center sm:self-auto"
           >
             <span>Back to top</span>
             <div className="w-7 h-7 rounded-full bg-forest-800 group-hover:bg-forest-700 flex items-center justify-center text-ivory transition-colors">
               <ArrowUp className="w-3.5 h-3.5" />
             </div>
           </button>
-        </div>
-
-        {/* Developer Credit */}
-        <div className="pt-6 mt-6 border-t border-forest-900 text-center text-[11px] sm:text-xs font-mono text-sand/50">
-          <span>Designed & Developed by </span>
-          <a
-            href="https://kevinsivraj.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sand/75 hover:text-ivory transition-colors underline-offset-4 hover:underline"
-          >
-            Kevin Siv Raj M S
-          </a>
         </div>
 
       </div>
