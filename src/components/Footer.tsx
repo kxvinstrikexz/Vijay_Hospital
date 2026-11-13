@@ -95,6 +95,19 @@ export const Footer: React.FC = () => {
           </button>
         </div>
 
+        {/* Developer Credit */}
+        <div className="pt-6 mt-6 border-t border-forest-900 text-center text-[11px] sm:text-xs font-mono text-sand/50">
+          <span>Designed & Developed by </span>
+          <a
+            href="https://kevinsivraj.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sand/75 hover:text-ivory transition-colors underline-offset-4 hover:underline"
+          >
+            Kevin Siv Raj M S
+          </a>
+        </div>
+
       </div>
     </footer>
   );
